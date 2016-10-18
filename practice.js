@@ -2,18 +2,26 @@
   // 1) What is the purpose of the 'this keyword'?
 
       //Answer
+      /* this is the current execution context of a function*/
 
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
       //Answer
+      /* Explicit: specifically sets the value
+      Implicit: 
+      Default/Window: if you don't specify you give the window that value
+      New: modifies the syntax to create an object. means it is a constructor
+      */
 
   // 3) What is the difference between call and apply?
 
       //Answer
+      /* The way the parameters are written. The parameters are wrapped in an array on apply. They both take two arguments but the apply has the arguments in an array. */
 
   // 4) What does .bind do?
 
       //Answer
+      /* .bind creates a second function */
 
 
 //Next Problem
