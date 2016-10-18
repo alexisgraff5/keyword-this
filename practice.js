@@ -48,6 +48,14 @@ getUsername(this);
 
 
 // Write the function definitions which will make the following function invocations function properly.
+  function Car(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.moveCar = function(miles) {
+      
+    };
+  }
 
   //Function Invocations Here
 
