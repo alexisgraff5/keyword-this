@@ -41,26 +41,28 @@
     };
 
 //Now, invoke the getUsername method and verify you got the username of the object and not anything else.
-getUsername(this);
+user.getUsername();
 
 
 //Next Problem
 
 
 // Write the function definitions which will make the following function invocations function properly.
-  function Car(make, model, year) {
+  function Car(make, model, year, miles) {
+    this.move = miles;
     this.make = make;
     this.model = model;
     this.year = year;
-    this.moveCar = function(miles) {
-      
+    this.moveCar = function(amt) {
+      this.move += amt;
+      return this.move;
     };
   }
 
   //Function Invocations Here
 
-var prius = new Car('Toyota', 'Prius', 2011);
-var mustang = new Car('Ford', 'Mustang', 2013);
+var prius = new Car('Toyota', 'Prius', 2011, 1000);
+var mustang = new Car('Ford', 'Mustang', 2013, 2000);
 
 prius.moveCar(); //increments prius' move property by 10. Returns the new move property.
 mustang.moveCar(); //increments mustang' move property by 10. Returns the new move property.
@@ -79,6 +81,7 @@ var getYear = function(){
 
 //Note(no tests)
   //Code Here
+  getYear.call(prius);
 
 
 //New Problem
@@ -93,14 +96,16 @@ var getMyUsername = function() {
  return this.username;
 };
 
-var userName = getMyUsername(); //Fix this
+var userName = getMyUsername.apply(myUser); //Fix this
 
 //Above you're given an object, and  a function. What will the getUsername function return?
 //Note(no tests)
   //Answer Here
+     //undefined
 
 //In the example above, what is the 'this keyword' bound to when getUsername runs?
 
   //Answer Here
+     // it is bound to the window
 
 //Fix the getMyUsername invocation so that userName will be equal to 'iliketurtles'.
